@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150514135322) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "payment_increases", force: :cascade do |t|
     t.integer  "percentage"
     t.string   "frequency"
@@ -27,7 +30,7 @@ ActiveRecord::Schema.define(version: 20150514135322) do
     t.integer  "users_id"
   end
 
-  add_index "positions", ["users_id"], name: "index_positions_on_users_id"
+  add_index "positions", ["users_id"], name: "index_positions_on_users_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -53,8 +56,8 @@ ActiveRecord::Schema.define(version: 20150514135322) do
     t.integer  "position_id"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["position_id"], name: "index_users_on_position_id"
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["position_id"], name: "index_users_on_position_id", using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
