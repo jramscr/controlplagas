@@ -1,0 +1,22 @@
+<%= render "layouts/user_header" %>
+<div class="center row">
+  <h1>Menú principal</h1>
+
+  <div class="weather">
+    <header class="header back1">
+      <h2><%= link_to 'Usuarios', users_path, class: 'menu-item' %></h2>
+    </header>
+
+    <header class="header back2">
+      <h2><%= link_to 'Puestos', positions_path, class: 'menu-item' %></h2>
+    </header>
+
+    <header class="header back3">
+      <h2><%= link_to 'Aumentos', payment_increases_path, class: 'menu-item' %></h2>
+    </header>
+
+    <header class="header back4">
+      <h2><%= link_to 'Salir', destroy_user_session_path, method: :delete, class: 'menu-item' %></h2>
+    </header>
+  </div>
+</div>

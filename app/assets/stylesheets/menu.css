@@ -1,0 +1,36 @@
+.header-menu, .header-menu:hover{
+  list-style:none;
+  background-color:transparent!important;
+}
+
+.header-menu a:hover {
+  background-color:transparent!important;
+  color: black;
+}
+
+a.menu-item, a.menu-item:hover{
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+  padding: 5% 80% 5% 0 !important;
+}
+
+.link, .link:hover{
+  background-color:transparent!important;
+  color: black;
+}
+
+.back1{
+  background-color: #D49A6A !important;
+}
+
+.back2{
+  background-color: #D46A6A !important;
+}
+
+.back3{
+  background-color: #407F7F !important;
+}
+
+.back4{
+  background-color: #55AA55 !important;
+}

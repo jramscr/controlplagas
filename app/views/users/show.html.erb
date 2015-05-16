@@ -1,0 +1,42 @@
+<%= render "layouts/user_header" %>
+<div class="center row">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Nombres:</strong>
+    <%= @user.names %>
+  </p>
+
+  <p>
+    <strong>Apellidos:</strong>
+    <%= @user.surnames %>
+  </p>
+
+  <p>
+    <strong>Cédula:</strong>
+    <%= @user.identifier %>
+  </p>
+
+  <p>
+    <strong>Teléfono:</strong>
+    <%= @user.telephone %>
+  </p>
+
+  <p>
+    <strong>Salario:</strong>
+    <%= @user.salary %>
+  </p>
+
+  <p>
+    <strong>Fecha de contratación:</strong>
+    <%= @user.admission.to_date %>
+  </p>
+
+  <p>
+    <strong>Fecha de despido:</strong>
+    <%= @user.departure.to_date %>
+  </p>
+
+  <%= link_to 'Atrás', users_path, class: "info button font-color" %> |
+  <%= link_to 'Actualizar', edit_user_path(@user), class: "button font-color" %>
+</div>

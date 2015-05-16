@@ -1,0 +1,9 @@
+<%= render "layouts/user_header" %>
+<div class="center row">
+  <h1>Editar trabajador</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Atrás', users_path, class: "info button font-color" %> |
+  <%= link_to 'Perfil', @user, class: "info button font-color" %>
+</div>

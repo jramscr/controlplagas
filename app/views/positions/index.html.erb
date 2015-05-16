@@ -1,0 +1,31 @@
+<%= render "layouts/user_header" %>
+<div class="row">
+  <br>
+  <%= link_to 'Nuevo Puesto', new_position_path, class: "button right font-color" %>
+  <%= link_to 'Menú Principal', root_path, class: "button left font-color" %>
+  <hr/>
+  <div class="columns">
+    <p id="notice"><%= notice %></p>
+
+    <h1>Puestos de trabajo</h1>
+
+    <table class="fill-spaces decorated1">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th colspan="3">Opciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @positions.each do |position| %>
+          <tr>
+            <td><%= position.name %></td>
+            <td><%= link_to 'Editar', edit_position_path(position), class: "link" %></td>
+            <td><%= link_to 'Borrar', position, method: :delete, data: { confirm: 'Se borrará permanentemente. Está seguro?' }, class: "link" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

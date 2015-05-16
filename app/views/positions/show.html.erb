@@ -1,0 +1,12 @@
+<%= render "layouts/user_header" %>
+<div class="center row">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Nombre del puesto:</strong>
+    <%= @position.name %>
+  </p>
+
+  <%= link_to 'Atrás', positions_path, class: "info button font-color" %>
+  <%= link_to 'Editar', edit_position_path(@position), class: "button font-color right" %>
+</div>

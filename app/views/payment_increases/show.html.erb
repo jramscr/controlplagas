@@ -1,0 +1,17 @@
+<%= render "layouts/user_header"%>
+<div class="center row">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Porcentaje:</strong>
+    <%= @payment_increase.percentage %>
+  </p>
+
+  <p>
+    <strong>Frequencia:</strong>
+    <%= @payment_increase.frequency %>
+  </p>
+
+  <%= link_to 'Atrás', payment_increases_path, class: "info button font-color left" %>
+  <%= link_to 'Editar', edit_payment_increase_path(@payment_increase), class: "button font-color right" %>
+</div>

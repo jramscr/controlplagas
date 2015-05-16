@@ -1,0 +1,12 @@
+<%= simple_form_for(@payment_increase) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :percentage, label: "Porcentaje del salario" %>
+    <%= f.input :frequency, label: "Frecuencia del aumento" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "button success right" %>
+  </div>
+<% end %>

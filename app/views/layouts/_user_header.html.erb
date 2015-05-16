@@ -1,0 +1,9 @@
+<ul class="row header-menu">
+  <% if user_signed_in? %>
+    <li><%= link_to "Ingresado como: #{fullname(current_user)}", user_path(current_user), class: "right" %></li>
+    <br/>
+    <li><%= link_to "Salir", destroy_user_session_path, method: :delete, class: "right" %></li>
+  <% else %>
+    <li><%= link_to "Ingresar", new_user_session_path %></li>
+  <% end %>
+</ul>
